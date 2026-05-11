@@ -1,0 +1,200 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 800" width="600" height="800">
+  <defs>
+    <style>
+      .body-outline { fill: none; stroke: #2C2C2C; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+      .measurement-line { stroke: #B8860B; stroke-width: 1.5; stroke-dasharray: 5,3; fill: none; }
+      .measurement-line-solid { stroke: #B8860B; stroke-width: 1.5; fill: none; }
+      .label-text { font-family: 'Georgia', 'Times New Roman', serif; font-size: 12px; fill: #2C2C2C; }
+      .label-text-sm { font-family: 'Georgia', 'Times New Roman', serif; font-size: 10.5px; fill: #5C5C5C; }
+      .label-text-bold { font-family: 'Georgia', 'Times New Roman', serif; font-size: 13px; fill: #2C2C2C; font-weight: bold; }
+      .title-text { font-family: 'Georgia', 'Times New Roman', serif; font-size: 20px; fill: #2C2C2C; font-weight: bold; letter-spacing: 2px; }
+      .subtitle-text { font-family: 'Georgia', 'Times New Roman', serif; font-size: 13px; fill: #8B7355; letter-spacing: 1px; }
+      .section-title { font-family: 'Georgia', 'Times New Roman', serif; font-size: 14px; fill: #B8860B; font-weight: bold; letter-spacing: 1px; }
+      .arrow-head { fill: #B8860B; stroke: none; }
+      .connector-line { stroke: #8B7355; stroke-width: 0.8; fill: none; }
+      .box-outline { fill: none; stroke: #D4C5A9; stroke-width: 1; rx: 8; }
+      .box-fill { fill: #FEFDFB; stroke: #D4C5A9; stroke-width: 1; }
+      .number-circle { fill: #B8860B; stroke: none; }
+      .number-text { font-family: 'Georgia', 'Times New Roman', serif; font-size: 11px; fill: white; font-weight: bold; text-anchor: middle; dominant-baseline: central; }
+      .tape-measure { fill: #FFF8DC; stroke: #B8860B; stroke-width: 1; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="800" fill="#FAFAF7"/>
+
+  <!-- Title -->
+  <text x="300" y="38" text-anchor="middle" class="title-text">MEASUREMENT TIPS</text>
+  <line x1="200" y1="50" x2="400" y2="50" stroke="#B8860B" stroke-width="1"/>
+  <text x="300" y="68" text-anchor="middle" class="subtitle-text">A Guide to Accurate Body Measurements</text>
+
+  <!-- ========== SECTION 1: CHEST / BUST ========== -->
+  <rect x="20" y="90" width="270" height="155" rx="6" class="box-fill"/>
+  <circle cx="40" cy="108" r="10" class="number-circle"/>
+  <text x="40" y="108" class="number-text">1</text>
+  <text x="56" y="112" class="section-title">CHEST / BUST</text>
+
+  <!-- Mini torso illustration -->
+  <path d="M 80,140 Q 70,138 60,142 L 55,170 L 60,200 L 80,210 L 100,210 L 120,200 L 125,170 L 120,142 Q 110,138 100,140" class="body-outline"/>
+  <!-- Measurement line across chest -->
+  <line x1="56" y1="165" x2="124" y2="165" class="measurement-line"/>
+  <polygon points="59,162 59,168 53,165" class="arrow-head"/>
+  <polygon points="121,162 121,168 127,165" class="arrow-head"/>
+
+  <text x="145" y="140" class="label-text">Wrap the tape around</text>
+  <text x="145" y="155" class="label-text">the fullest part of the</text>
+  <text x="145" y="170" class="label-text">chest. Keep tape level</text>
+  <text x="145" y="185" class="label-text">and parallel to the floor.</text>
+  <text x="145" y="205" class="label-text-sm">Breathe normally; do not</text>
+  <text x="145" y="218" class="label-text-sm">hold your breath.</text>
+
+  <!-- ========== SECTION 2: WAIST ========== -->
+  <rect x="310" y="90" width="270" height="155" rx="6" class="box-fill"/>
+  <circle cx="330" cy="108" r="10" class="number-circle"/>
+  <text x="330" y="108" class="number-text">2</text>
+  <text x="346" y="112" class="section-title">WAIST</text>
+
+  <!-- Mini torso illustration -->
+  <path d="M 370,140 Q 360,138 350,142 L 346,162 Q 344,175 348,190 L 355,210 L 380,216 L 400,216 L 425,210 L 432,190 Q 436,175 434,162 L 430,142 Q 420,138 410,140" class="body-outline"/>
+  <!-- Measurement line at waist -->
+  <line x1="345" y1="178" x2="435" y2="178" class="measurement-line"/>
+  <polygon points="348,175 348,181 342,178" class="arrow-head"/>
+  <polygon points="432,175 432,181 438,178" class="arrow-head"/>
+
+  <text x="450" y="145" class="label-text" text-anchor="end">Find your natural</text>
+  <text x="450" y="160" class="label-text" text-anchor="end">waistline: bend to</text>
+  <text x="450" y="175" class="label-text" text-anchor="end">one side -- the crease</text>
+  <text x="450" y="190" class="label-text" text-anchor="end">is your waist.</text>
+  <text x="450" y="210" class="label-text-sm" text-anchor="end">Usually the narrowest</text>
+  <text x="450" y="223" class="label-text-sm" text-anchor="end">part of your torso.</text>
+
+  <!-- ========== SECTION 3: HIPS ========== -->
+  <rect x="20" y="260" width="270" height="155" rx="6" class="box-fill"/>
+  <circle cx="40" cy="278" r="10" class="number-circle"/>
+  <text x="40" y="278" class="number-text">3</text>
+  <text x="56" y="282" class="section-title">HIPS</text>
+
+  <!-- Mini hip illustration -->
+  <path d="M 85,295 Q 80,300 72,310 L 65,340 L 60,370 L 70,380 Q 75,385 90,385 L 90,380 L 82,355" class="body-outline"/>
+  <path d="M 95,295 Q 100,300 108,310 L 115,340 L 120,370 L 110,380 Q 105,385 90,385 L 90,380 L 98,355" class="body-outline"/>
+  <!-- Measurement line at widest point -->
+  <line x1="63" y1="352" x2="117" y2="352" class="measurement-line"/>
+  <polygon points="66,349 66,355 60,352" class="arrow-head"/>
+  <polygon points="114,349 114,355 120,352" class="arrow-head"/>
+
+  <text x="145" y="306" class="label-text">Measure around the</text>
+  <text x="145" y="321" class="label-text">fullest part of your</text>
+  <text x="145" y="336" class="label-text">hips and buttocks.</text>
+  <text x="145" y="360" class="label-text-sm">Usually 7-9 inches</text>
+  <text x="145" y="373" class="label-text-sm">below natural waistline.</text>
+  <text x="145" y="393" class="label-text-sm">Keep tape level all around.</text>
+
+  <!-- ========== SECTION 4: SHOULDERS ========== -->
+  <rect x="310" y="260" width="270" height="155" rx="6" class="box-fill"/>
+  <circle cx="330" cy="278" r="10" class="number-circle"/>
+  <text x="330" y="278" class="number-text">4</text>
+  <text x="346" y="282" class="section-title">SHOULDERS</text>
+
+  <!-- Mini shoulder illustration -->
+  <path d="M 370,310 Q 360,308 345,314 L 345,320" class="body-outline"/>
+  <path d="M 410,310 Q 420,308 435,314 L 435,320" class="body-outline"/>
+  <path d="M 370,310 L 375,300 Q 385,294 390,294 Q 395,294 405,300 L 410,310" class="body-outline"/>
+  <!-- Measurement line across shoulders -->
+  <line x1="345" y1="314" x2="435" y2="314" class="measurement-line"/>
+  <polygon points="348,311 348,317 342,314" class="arrow-head"/>
+  <polygon points="432,311 432,317 438,314" class="arrow-head"/>
+
+  <text x="450" y="340" class="label-text" text-anchor="end">Measure from the</text>
+  <text x="450" y="355" class="label-text" text-anchor="end">edge of one shoulder</text>
+  <text x="450" y="370" class="label-text" text-anchor="end">to the other, across</text>
+  <text x="450" y="385" class="label-text" text-anchor="end">the back.</text>
+  <text x="450" y="400" class="label-text-sm" text-anchor="end">At the bony points.</text>
+
+  <!-- ========== SECTION 5: SLEEVE LENGTH ========== -->
+  <rect x="20" y="430" width="270" height="155" rx="6" class="box-fill"/>
+  <circle cx="40" cy="448" r="10" class="number-circle"/>
+  <text x="40" y="448" class="number-text">5</text>
+  <text x="56" y="452" class="section-title">SLEEVE LENGTH</text>
+
+  <!-- Mini arm illustration -->
+  <path d="M 55,475 L 50,480 L 42,510 L 38,545 L 36,565" class="body-outline"/>
+  <path d="M 75,475 L 56,480 L 48,510 L 44,545 L 42,565" class="body-outline"/>
+  <!-- Measurement line along arm -->
+  <line x1="62" y1="475" x2="40" y2="565" class="measurement-line"/>
+  <polygon points="62,479 60,473 64,473" class="arrow-head"/>
+  <polygon points="40,561 38,567 42,567" class="arrow-head"/>
+  <!-- Shoulder point dot -->
+  <circle cx="62" cy="475" r="3" class="arrow-head"/>
+
+  <text x="90" y="490" class="label-text">From the shoulder</text>
+  <text x="90" y="505" class="label-text">point, down the</text>
+  <text x="90" y="520" class="label-text">outside of the arm</text>
+  <text x="90" y="535" class="label-text">to the wrist bone.</text>
+  <text x="90" y="558" class="label-text-sm">Bend elbow slightly</text>
+  <text x="90" y="571" class="label-text-sm">for a natural fit.</text>
+
+  <!-- ========== SECTION 6: INSEAM & OUTSEAM ========== -->
+  <rect x="310" y="430" width="270" height="155" rx="6" class="box-fill"/>
+  <circle cx="330" cy="448" r="10" class="number-circle"/>
+  <text x="330" y="448" class="number-text">6</text>
+  <text x="346" y="452" class="section-title">INSEAM &amp; OUTSEAM</text>
+
+  <!-- Mini leg illustration -->
+  <path d="M 360,475 L 355,510 L 352,545 L 350,570" class="body-outline"/>
+  <path d="M 380,490 L 376,510 L 373,545 L 370,570" class="body-outline"/>
+  <!-- Outseam line -->
+  <line x1="357" y1="475" x2="351" y2="570" class="measurement-line"/>
+  <text x="340" y="525" class="label-text-sm" text-anchor="end" fill="#B8860B">Out</text>
+  <!-- Inseam line -->
+  <line x1="378" y1="490" x2="372" y2="570" class="measurement-line"/>
+  <text x="390" y="535" class="label-text-sm" fill="#B8860B">In</text>
+
+  <text x="410" y="490" class="label-text">Inseam: from crotch</text>
+  <text x="410" y="505" class="label-text">to ankle bone along</text>
+  <text x="410" y="520" class="label-text">inner leg.</text>
+  <text x="410" y="545" class="label-text">Outseam: from waist</text>
+  <text x="410" y="560" class="label-text">to ankle bone along</text>
+  <text x="410" y="575" class="label-text">outer leg.</text>
+
+  <!-- ========== SECTION 7: NECK ========== -->
+  <rect x="20" y="600" width="270" height="120" rx="6" class="box-fill"/>
+  <circle cx="40" cy="618" r="10" class="number-circle"/>
+  <text x="40" y="618" class="number-text">7</text>
+  <text x="56" y="622" class="section-title">NECK</text>
+
+  <!-- Mini neck illustration -->
+  <ellipse cx="75" cy="650" rx="14" ry="18" class="body-outline"/>
+  <line x1="65" y1="668" x2="62" y2="688" class="body-outline"/>
+  <line x1="85" y1="668" x2="88" y2="688" class="body-outline"/>
+  <!-- Measurement line around neck -->
+  <path d="M 62,672 Q 62,680 75,682 Q 88,680 88,672" class="measurement-line" fill="none"/>
+  <ellipse cx="75" cy="674" rx="14" ry="5" class="measurement-line"/>
+
+  <text x="105" y="650" class="label-text">Wrap the tape around</text>
+  <text x="105" y="665" class="label-text">the base of the neck.</text>
+  <text x="105" y="688" class="label-text-sm">Insert two fingers under</text>
+  <text x="105" y="701" class="label-text-sm">the tape for comfort fit.</text>
+
+  <!-- ========== SECTION 8: GENERAL TIPS ========== -->
+  <rect x="310" y="600" width="270" height="120" rx="6" class="box-fill"/>
+  <circle cx="330" cy="618" r="10" class="number-circle"/>
+  <text x="330" y="618" class="number-text">8</text>
+  <text x="346" y="622" class="section-title">GENERAL TIPS</text>
+
+  <!-- Tape measure icon -->
+  <rect x="335" y="645" width="60" height="12" rx="3" class="tape-measure"/>
+  <line x1="345" y1="645" x2="345" y2="657" stroke="#B8860B" stroke-width="0.5"/>
+  <line x1="355" y1="645" x2="355" y2="657" stroke="#B8860B" stroke-width="0.5"/>
+  <line x1="365" y1="645" x2="365" y2="657" stroke="#B8860B" stroke-width="0.5"/>
+  <line x1="375" y1="645" x2="375" y2="657" stroke="#B8860B" stroke-width="0.5"/>
+  <line x1="385" y1="645" x2="385" y2="657" stroke="#B8860B" stroke-width="0.5"/>
+
+  <text x="325" y="680" class="label-text-sm">Use a fabric tape measure</text>
+  <text x="325" y="695" class="label-text-sm">Stand straight and relaxed</text>
+  <text x="325" y="710" class="label-text-sm">Have someone help you</text>
+
+  <!-- Footer -->
+  <line x1="100" y1="740" x2="500" y2="740" stroke="#B8860B" stroke-width="0.5"/>
+  <text x="300" y="762" text-anchor="middle" class="subtitle-text">All measurements should be taken in inches or centimeters</text>
+  <text x="300" y="782" text-anchor="middle" class="subtitle-text">For the most accurate fit, have a friend assist you</text>
+</svg>

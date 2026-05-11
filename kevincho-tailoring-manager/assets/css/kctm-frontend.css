@@ -1,0 +1,470 @@
+/* KevinCho Tailoring Manager - Frontend Styles
+   Brand palette:
+     Primary dark:  #402417 (dark brown)
+     Accent gold:   #c9a96e (luxury gold)
+     Light gold bg: #fef9e7
+*/
+
+/* Measurements Form */
+.kctm-measurements-wrap {
+    max-width: 800px;
+}
+
+.kctm-measurements-wrap h2 {
+    font-size: 1.4em;
+    margin: 2em 0 0.5em;
+    padding-bottom: 0.5em;
+    border-bottom: 2px solid #c9a96e; /* Gold accent for African luxury brand */
+}
+
+.kctm-measurements-wrap .kctm-info-note {
+    background: #fef9e7;
+    border-left: 4px solid #c9a96e;
+    padding: 12px 16px;
+    margin-bottom: 24px;
+    font-size: 0.95em;
+    color: #333;
+}
+
+.kctm-measurements-wrap .kctm-section {
+    margin-bottom: 30px;
+}
+
+/* Profile radio buttons */
+.kctm-gender-options {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.kctm-gender-options label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 20px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-weight: 500;
+}
+
+.kctm-gender-options label:hover {
+    border-color: #c9a96e;
+}
+
+.kctm-gender-options input[type="radio"]:checked + span,
+.kctm-gender-options label.active {
+    background: none;
+}
+
+.kctm-gender-options label.active,
+.kctm-gender-options label:has(input:checked) {
+    border-color: #c9a96e;
+    background: #fef9e7;
+}
+
+.kctm-gender-options input[type="radio"] {
+    accent-color: #c9a96e;
+}
+
+/* Measurement field grid */
+.kctm-field-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    margin-top: 12px;
+}
+
+.kctm-field-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.kctm-field-group label {
+    font-weight: 500;
+    margin-bottom: 4px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.kctm-field-group .kctm-input-wrap {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.kctm-field-group input[type="number"] {
+    width: 100%;
+    max-width: 120px;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    transition: border-color 0.2s;
+}
+
+.kctm-field-group input[type="number"]:focus {
+    border-color: #c9a96e;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(201, 169, 110, 0.2);
+}
+
+.kctm-field-group .kctm-unit {
+    color: #999;
+    font-size: 0.85em;
+}
+
+/* Profile fields (not grid) */
+.kctm-profile-fields {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.kctm-profile-fields .kctm-field-group {
+    min-width: 150px;
+}
+
+/* Hidden gender fields */
+.kctm-field-group[data-gender] {
+    transition: opacity 0.3s, max-height 0.3s;
+}
+
+.kctm-field-group.kctm-hidden {
+    display: none;
+}
+
+/* Save button */
+.kctm-save-btn {
+    display: inline-block;
+    background: #402417;
+    color: #fff;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 24px;
+    transition: background 0.2s;
+    letter-spacing: 0.5px;
+}
+
+.kctm-save-btn:hover {
+    background: #c9a96e;
+    color: #402417;
+}
+
+.kctm-save-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* Messages */
+.kctm-message {
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin: 16px 0;
+    display: none;
+}
+
+.kctm-message.kctm-success {
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    display: block;
+}
+
+.kctm-message.kctm-error {
+    background: #f8d7da;
+    color: #721c24;
+    border: 1px solid #f5c6cb;
+    display: block;
+}
+
+/* Loading spinner */
+.kctm-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #ddd;
+    border-top-color: #c9a96e;
+    border-radius: 50%;
+    animation: kctm-spin 0.6s linear infinite;
+    margin-left: 8px;
+    vertical-align: middle;
+}
+
+@keyframes kctm-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ==============================
+   Registration Form Enhancements
+   ============================== */
+
+/* Divider / section label */
+.kctm-reg-divider {
+    position: relative;
+    text-align: center;
+    margin: 28px 0 18px;
+    border-bottom: 1px solid #e0d9cf;
+}
+
+.kctm-reg-divider span {
+    position: relative;
+    top: 0.65em;
+    background: #fff;
+    padding: 0 14px;
+    font-size: 0.82em;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: #c9a96e;
+    font-weight: 600;
+}
+
+/* Side-by-side height & weight row */
+.kctm-reg-row {
+    display: flex;
+    gap: 16px;
+}
+
+.kctm-reg-row .form-row-first,
+.kctm-reg-row .form-row-last {
+    flex: 1;
+}
+
+/* Question text */
+.kctm-reg-question {
+    font-weight: 500;
+    font-size: 0.95em;
+    color: #402417;
+    margin-bottom: 10px;
+}
+
+/* Toggle buttons (yes / no) */
+.kctm-reg-toggle-options {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.kctm-reg-toggle-label {
+    display: block;
+    cursor: pointer;
+}
+
+.kctm-reg-toggle-label input[type="radio"] {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.kctm-reg-toggle-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: #555;
+    background: #fff;
+    transition: all 0.2s ease;
+}
+
+.kctm-reg-toggle-label:hover .kctm-reg-toggle-btn {
+    border-color: #c9a96e;
+}
+
+.kctm-reg-toggle-label.active .kctm-reg-toggle-btn,
+.kctm-reg-toggle-label input[type="radio"]:checked ~ .kctm-reg-toggle-btn {
+    border-color: #c9a96e;
+    background: #fef9e7;
+    color: #402417;
+    font-weight: 600;
+}
+
+/* Info cards */
+.kctm-reg-info-card {
+    background: #fef9e7;
+    border-left: 4px solid #c9a96e;
+    padding: 14px 18px;
+    border-radius: 0 6px 6px 0;
+    margin: 14px 0;
+    font-size: 0.9em;
+    color: #402417;
+    line-height: 1.6;
+}
+
+.kctm-reg-info-card.kctm-reg-info-partial {
+    border-left-color: #c9a96e;
+    background: #fdfcf8;
+}
+
+/* Measurement guide link */
+.kctm-reg-guide-link {
+    margin: 12px 0;
+}
+
+.kctm-reg-guide-link a {
+    color: #c9a96e;
+    text-decoration: none;
+    font-size: 0.9em;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+}
+
+.kctm-reg-guide-link a:hover {
+    color: #402417;
+}
+
+.kctm-guide-arrow {
+    display: inline-block;
+    transition: transform 0.25s ease;
+    font-size: 0.8em;
+}
+
+/* Collapsible guide content */
+.kctm-measurement-guide {
+    margin: 12px 0 18px;
+    padding: 18px;
+    background: #fafaf7;
+    border: 1px solid #e8e2d6;
+    border-radius: 8px;
+}
+
+.kctm-guide-content {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+}
+
+.kctm-guide-image {
+    flex: 0 0 200px;
+}
+
+.kctm-guide-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+}
+
+.kctm-guide-tips h4 {
+    margin: 0 0 8px;
+    font-size: 0.9em;
+    color: #402417;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.kctm-guide-tips ul {
+    margin: 0;
+    padding: 0 0 0 18px;
+    list-style: disc;
+}
+
+.kctm-guide-tips li {
+    font-size: 0.85em;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Measurement section titles */
+.kctm-reg-section {
+    margin-top: 18px;
+}
+
+.kctm-reg-section-title {
+    font-size: 0.82em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #402417;
+    font-weight: 600;
+    margin: 0 0 10px;
+    padding-bottom: 6px;
+    border-bottom: 1px solid #e8e2d6;
+}
+
+/* Measurement fields grid */
+.kctm-reg-fields-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+    margin-bottom: 6px;
+}
+
+.kctm-reg-field {
+    margin: 0;
+}
+
+.kctm-reg-field label {
+    display: block;
+    font-size: 0.85em;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 4px;
+}
+
+.kctm-reg-field label small {
+    color: #999;
+    font-weight: 400;
+}
+
+.kctm-reg-field input[type="number"] {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95em;
+    transition: border-color 0.2s;
+    box-sizing: border-box;
+}
+
+.kctm-reg-field input[type="number"]:focus {
+    border-color: #c9a96e;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(201, 169, 110, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    .kctm-field-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .kctm-gender-options {
+        flex-direction: column;
+    }
+
+    .kctm-profile-fields {
+        flex-direction: column;
+    }
+
+    .kctm-reg-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .kctm-guide-content {
+        flex-direction: column;
+    }
+
+    .kctm-guide-image {
+        flex: 0 0 auto;
+        max-width: 200px;
+        margin: 0 auto;
+    }
+
+    .kctm-reg-fields-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .kctm-reg-toggle-options {
+        flex-direction: column;
+    }
+}

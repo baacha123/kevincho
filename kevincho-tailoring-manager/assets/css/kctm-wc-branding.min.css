@@ -1,0 +1,564 @@
+/* ═══════════════════════════════════════════════════════════
+   Kevin Cho — Frontend Brand Overrides
+   Applies brand palette to WooCommerce + Vasia theme
+   Primary: #402417 (dark brown) | Accent: #c9a96e (gold) | Cream: #fef9e7
+   ═══════════════════════════════════════════════════════════ */
+
+/* ── Buttons ─────────────────────────────────────────────── */
+.woocommerce .button,
+.woocommerce-Button,
+.woocommerce button.button,
+.woocommerce input.button,
+.woocommerce a.button,
+.woocommerce #respond input#submit,
+.button.product_type_simple,
+.button.add_to_cart_button,
+.btn-quickview,
+.wc-block-components-button,
+.wp-element-button,
+.wp-block-button__link {
+    background-color: #402417 !important;
+    color: #fef9e7 !important;
+    border: none !important;
+    border-radius: 8px !important;
+    transition: all 0.25s ease !important;
+}
+
+.woocommerce .button:hover,
+.woocommerce-Button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover,
+.woocommerce a.button:hover,
+.woocommerce #respond input#submit:hover,
+.button.product_type_simple:hover,
+.button.add_to_cart_button:hover,
+.btn-quickview:hover,
+.wc-block-components-button:hover,
+.wp-element-button:hover,
+.wp-block-button__link:hover {
+    background-color: #c9a96e !important;
+    color: #402417 !important;
+}
+
+.woocommerce a.button.alt,
+.woocommerce button.button.alt,
+.woocommerce input.button.alt,
+.woocommerce #respond input#submit.alt {
+    background-color: #c9a96e !important;
+    color: #402417 !important;
+}
+
+.woocommerce a.button.alt:hover,
+.woocommerce button.button.alt:hover,
+.woocommerce input.button.alt:hover,
+.woocommerce #respond input#submit.alt:hover {
+    background-color: #402417 !important;
+    color: #fef9e7 !important;
+}
+
+.woocommerce a.added_to_cart {
+    color: #c9a96e !important;
+    font-weight: 600;
+}
+
+.woocommerce a.added_to_cart:hover {
+    color: #402417 !important;
+}
+
+/* ── Links ───────────────────────────────────────────────── */
+.woocommerce a,
+.woocommerce-page a {
+    color: #c9a96e;
+}
+
+.woocommerce a:hover,
+.woocommerce-page a:hover {
+    color: #b08d4f;
+}
+
+/* ── Prices ──────────────────────────────────────────────── */
+.woocommerce ul.products li.product .price,
+.woocommerce div.product p.price,
+.woocommerce div.product span.price,
+.woocommerce-Price-amount {
+    color: #402417 !important;
+    font-weight: 700;
+}
+
+.woocommerce div.product p.price ins,
+.woocommerce div.product span.price ins {
+    color: #c9a96e !important;
+}
+
+/* ── Sale Badge ──────────────────────────────────────────── */
+.woocommerce span.onsale,
+.onsale {
+    background-color: #c9a96e !important;
+    color: #402417 !important;
+    font-weight: 700;
+    border-radius: 8px !important;
+}
+
+/* ── Star Ratings ────────────────────────────────────────── */
+.woocommerce .star-rating span::before,
+.woocommerce .star-rating::before {
+    color: #c9a96e !important;
+}
+
+.woocommerce p.stars a {
+    color: #c9a96e !important;
+}
+
+/* ── Form Input Focus ────────────────────────────────────── */
+.woocommerce form .form-row input.input-text:focus,
+.woocommerce form .form-row textarea:focus,
+.woocommerce form .form-row select:focus,
+.woocommerce-Input:focus,
+.woocommerce input[type="text"]:focus,
+.woocommerce input[type="email"]:focus,
+.woocommerce input[type="password"]:focus,
+.woocommerce input[type="tel"]:focus,
+.woocommerce input[type="number"]:focus,
+.woocommerce textarea:focus,
+.woocommerce select:focus {
+    border-color: #c9a96e !important;
+    outline: none !important;
+    box-shadow: 0 0 0 2px rgba(201, 169, 110, 0.2) !important;
+}
+
+/* ── My Account Navigation ───────────────────────────────── */
+.woocommerce-MyAccount-navigation ul li a {
+    color: #402417;
+    font-weight: 500;
+    padding: 0.65rem 1rem;
+    border-radius: 8px;
+    display: block;
+    transition: all 0.2s;
+}
+
+.woocommerce-MyAccount-navigation ul li a:hover {
+    background: #fef9e7;
+    color: #c9a96e;
+}
+
+.woocommerce-MyAccount-navigation ul li.is-active a {
+    background: #402417 !important;
+    color: #c9a96e !important;
+    font-weight: 600;
+}
+
+.woocommerce-MyAccount-navigation ul {
+    list-style: none;
+    padding: 0;
+}
+
+.woocommerce-MyAccount-navigation ul li {
+    margin-bottom: 0.25rem;
+}
+
+/* ── WC Notices & Messages ───────────────────────────────── */
+.woocommerce-message,
+.woocommerce-info {
+    border-top-color: #c9a96e !important;
+}
+
+.woocommerce-message::before,
+.woocommerce-info::before {
+    color: #c9a96e !important;
+}
+
+.woocommerce-error {
+    border-top-color: #e74c3c !important;
+}
+
+/* ── Checkout Block Components ───────────────────────────── */
+.wc-block-components-checkout-step--with-step-number .wc-block-components-checkout-step__heading::before {
+    background-color: #c9a96e !important;
+    color: #402417 !important;
+}
+
+.wc-block-components-radio-control__option--checked::before {
+    border-color: #c9a96e !important;
+}
+
+.wc-block-components-radio-control__input:checked {
+    accent-color: #c9a96e !important;
+}
+
+input[type="checkbox"]:checked {
+    accent-color: #c9a96e;
+}
+
+/* ── Product Cards (Vasia theme) ─────────────────────────── */
+.product-layout-4 .product-details .product-name a {
+    color: #402417 !important;
+    font-weight: 600;
+}
+
+.product-layout-4 .product-details .product-name a:hover {
+    color: #c9a96e !important;
+}
+
+/* ── Tabs on Product Page ────────────────────────────────── */
+.woocommerce div.product .woocommerce-tabs ul.tabs li.active a {
+    color: #402417 !important;
+    border-bottom-color: #c9a96e !important;
+}
+
+.woocommerce div.product .woocommerce-tabs ul.tabs li a:hover {
+    color: #c9a96e !important;
+}
+
+/* ── Cart Page ───────────────────────────────────────────── */
+.woocommerce table.shop_table th {
+    color: #402417;
+    font-weight: 600;
+}
+
+.woocommerce .cart_totals h2,
+.woocommerce .cross-sells h2 {
+    color: #402417;
+}
+
+/* ── Coupon Code Input ───────────────────────────────────── */
+.woocommerce .coupon .input-text:focus {
+    border-color: #c9a96e !important;
+}
+
+/* ── Widget Styling (Sidebar Filters) ────────────────────── */
+.widget_product_categories ul li a {
+    color: #402417 !important;
+}
+
+.widget_product_categories ul li a:hover {
+    color: #c9a96e !important;
+}
+
+.widget_product_categories ul li.current-cat > a {
+    color: #c9a96e !important;
+    font-weight: 700;
+}
+
+.widget_price_filter .ui-slider .ui-slider-handle {
+    background: #c9a96e !important;
+    border-color: #402417 !important;
+}
+
+.widget_price_filter .ui-slider .ui-slider-range {
+    background: #c9a96e !important;
+}
+
+.widget_price_filter .price_slider_amount .button {
+    background: #402417 !important;
+    color: #fef9e7 !important;
+}
+
+/* ── Tag Cloud ───────────────────────────────────────────── */
+.widget_product_tag_cloud .tagcloud a {
+    color: #402417 !important;
+    border-color: #e8ddd0 !important;
+}
+
+.widget_product_tag_cloud .tagcloud a:hover {
+    background: #c9a96e !important;
+    color: #402417 !important;
+    border-color: #c9a96e !important;
+}
+
+/* ── Pagination ──────────────────────────────────────────── */
+.woocommerce nav.woocommerce-pagination ul li a:focus,
+.woocommerce nav.woocommerce-pagination ul li a:hover,
+.woocommerce nav.woocommerce-pagination ul li span.current {
+    background: #402417 !important;
+    color: #fef9e7 !important;
+    border-color: #402417 !important;
+}
+
+/* ── Quick View Modal ────────────────────────────────────── */
+.quick-view-modal .button,
+.quick-view-content .button {
+    background-color: #402417 !important;
+    color: #fef9e7 !important;
+}
+
+/* ── Breadcrumbs ─────────────────────────────────────────── */
+.woocommerce .woocommerce-breadcrumb a {
+    color: #c9a96e !important;
+}
+
+.woocommerce .woocommerce-breadcrumb {
+    color: #8b7355 !important;
+}
+
+/* ── Loading / Spinner ───────────────────────────────────── */
+.woocommerce .blockUI.blockOverlay::before {
+    border-top-color: #c9a96e !important;
+}
+
+/* ── Quantity Input ──────────────────────────────────────── */
+.woocommerce .quantity .qty:focus {
+    border-color: #c9a96e !important;
+    outline: none;
+}
+
+/* ── Login / Register Tabs ───────────────────────────────── */
+.rt-tab-header .rt-tab-link.active,
+.rt-tab-header .rt-tab-link:hover {
+    color: #c9a96e !important;
+    border-color: #c9a96e !important;
+}
+
+/* ── Selection highlights ────────────────────────────────── */
+::selection {
+    background: #c9a96e;
+    color: #402417;
+}
+
+/* ── Scrollbar (webkit) ──────────────────────────────────── */
+::-webkit-scrollbar-thumb {
+    background: #c9a96e;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f5f0eb;
+}
+
+/* ── Currency Switcher ───────────────────────────────────── */
+.kctm-currency-switcher {
+    background: #402417 !important;
+}
+
+.kctm-currency-option.active {
+    background: #c9a96e !important;
+    color: #402417 !important;
+}
+
+/* ── Quick View (unhide Vasia theme button) ────────────── */
+.btn-quickview {
+    display: block !important;
+    background: rgba(64, 36, 23, 0.9) !important;
+    color: #fef9e7 !important;
+    border-radius: 6px !important;
+    font-size: 0.85rem !important;
+    text-align: center !important;
+    padding: 6px 12px !important;
+    line-height: 1.6 !important;
+}
+
+.btn-quickview:hover {
+    background: #c9a96e !important;
+    color: #402417 !important;
+}
+
+/* ── Product Search Bar ─────────────────────────────────── */
+.kctm-product-search {
+    margin-bottom: 1.5rem;
+}
+
+.kctm-search-wrap {
+    display: flex;
+    max-width: 480px;
+    margin: 0 auto;
+    border: 2px solid #e8ddd0;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: border-color 0.25s;
+}
+
+.kctm-search-wrap:focus-within {
+    border-color: #c9a96e;
+    box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.15);
+}
+
+.kctm-search-input {
+    flex: 1;
+    border: none !important;
+    padding: 10px 14px !important;
+    font-size: 0.95rem;
+    outline: none !important;
+    box-shadow: none !important;
+    background: #fff;
+    color: #402417;
+}
+
+.kctm-search-input::placeholder {
+    color: #b8a48e;
+}
+
+.kctm-search-btn {
+    background: #402417 !important;
+    color: #fef9e7 !important;
+    border: none !important;
+    padding: 10px 16px !important;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    transition: background 0.25s;
+}
+
+.kctm-search-btn:hover {
+    background: #c9a96e !important;
+    color: #402417 !important;
+}
+
+/* ── Social Share Buttons ───────────────────────────────── */
+.kctm-social-share {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 0;
+    margin-top: 10px;
+    border-top: 1px solid #e8ddd0;
+}
+
+.kctm-share-label {
+    font-weight: 600;
+    color: #402417;
+    font-size: 0.9rem;
+}
+
+.kctm-share-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: #f5f0eb;
+    color: #402417;
+    text-decoration: none;
+    transition: all 0.25s;
+    border: none;
+    cursor: pointer;
+}
+
+.kctm-share-btn:hover {
+    transform: translateY(-2px);
+}
+
+.kctm-share-fb:hover { background: #1877f2; color: #fff; }
+.kctm-share-wa:hover { background: #25d366; color: #fff; }
+.kctm-share-tw:hover { background: #1da1f2; color: #fff; }
+.kctm-share-email:hover { background: #c9a96e; color: #402417; }
+.kctm-share-copy:hover { background: #402417; color: #fef9e7; }
+
+/* ── Newsletter Floating Bar ────────────────────────────── */
+.kctm-newsletter-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #402417;
+    color: #fef9e7;
+    padding: 14px 20px;
+    z-index: 9999;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.kctm-newsletter-bar.kctm-nl-visible {
+    transform: translateY(0);
+}
+
+.kctm-newsletter-inner {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.kctm-newsletter-inner strong {
+    color: #c9a96e;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+.kctm-newsletter-text {
+    font-size: 0.88rem;
+    opacity: 0.9;
+}
+
+.kctm-newsletter-form {
+    display: flex;
+    gap: 0;
+    flex-shrink: 0;
+}
+
+.kctm-newsletter-email {
+    padding: 8px 14px !important;
+    border: 2px solid #c9a96e !important;
+    border-right: none !important;
+    border-radius: 6px 0 0 6px !important;
+    background: transparent !important;
+    color: #fef9e7 !important;
+    font-size: 0.9rem;
+    outline: none !important;
+    width: 200px;
+    box-shadow: none !important;
+}
+
+.kctm-newsletter-email::placeholder {
+    color: #d4c4a0;
+}
+
+.kctm-newsletter-submit {
+    padding: 8px 18px !important;
+    background: #c9a96e !important;
+    color: #402417 !important;
+    border: 2px solid #c9a96e !important;
+    border-radius: 0 6px 6px 0 !important;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.25s;
+    white-space: nowrap;
+}
+
+.kctm-newsletter-submit:hover {
+    background: #fef9e7 !important;
+    color: #402417 !important;
+}
+
+.kctm-newsletter-close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    background: none;
+    border: none;
+    color: #e8ddd0;
+    font-size: 1.4rem;
+    cursor: pointer;
+    line-height: 1;
+    padding: 4px;
+}
+
+.kctm-newsletter-close:hover {
+    color: #c9a96e;
+}
+
+.kctm-newsletter-msg {
+    display: none;
+    font-size: 0.85rem;
+    color: #c9a96e;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    .kctm-newsletter-inner {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+    }
+    .kctm-newsletter-email {
+        width: 160px;
+    }
+    .kctm-social-share {
+        flex-wrap: wrap;
+    }
+}

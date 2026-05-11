@@ -1,0 +1,166 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 900" width="600" height="900">
+  <defs>
+    <style>
+      .body-outline { fill: none; stroke: #2C2C2C; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+      .measurement-line { stroke: #B8860B; stroke-width: 1.5; stroke-dasharray: 6,3; fill: none; }
+      .measurement-line-solid { stroke: #B8860B; stroke-width: 1.5; fill: none; }
+      .measurement-dot { fill: #B8860B; }
+      .label-text { font-family: 'Georgia', 'Times New Roman', serif; font-size: 13px; fill: #2C2C2C; }
+      .label-text-bold { font-family: 'Georgia', 'Times New Roman', serif; font-size: 13px; fill: #2C2C2C; font-weight: bold; }
+      .title-text { font-family: 'Georgia', 'Times New Roman', serif; font-size: 22px; fill: #2C2C2C; font-weight: bold; letter-spacing: 2px; }
+      .subtitle-text { font-family: 'Georgia', 'Times New Roman', serif; font-size: 14px; fill: #8B7355; letter-spacing: 1px; }
+      .arrow-head { fill: #B8860B; stroke: none; }
+      .connector-line { stroke: #8B7355; stroke-width: 0.8; fill: none; }
+      .letter-circle { fill: none; stroke: #B8860B; stroke-width: 1.2; }
+      .letter-text { font-family: 'Georgia', 'Times New Roman', serif; font-size: 11px; fill: #B8860B; font-weight: bold; text-anchor: middle; dominant-baseline: central; }
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="600" height="900" fill="#FAFAF7"/>
+
+  <!-- Title -->
+  <text x="300" y="40" text-anchor="middle" class="title-text">MALE MEASUREMENT GUIDE</text>
+  <line x1="200" y1="52" x2="400" y2="52" stroke="#B8860B" stroke-width="1"/>
+  <text x="300" y="70" text-anchor="middle" class="subtitle-text">How to Take Your Measurements</text>
+
+  <!-- Male figure - front view (centered at x=300) -->
+  <!-- Head -->
+  <ellipse cx="300" cy="120" rx="22" ry="28" class="body-outline"/>
+
+  <!-- Neck -->
+  <line x1="288" y1="148" x2="285" y2="168" class="body-outline"/>
+  <line x1="312" y1="148" x2="315" y2="168" class="body-outline"/>
+
+  <!-- Shoulders -->
+  <path d="M 285,168 Q 270,168 240,178" class="body-outline"/>
+  <path d="M 315,168 Q 330,168 360,178" class="body-outline"/>
+
+  <!-- Arms - left -->
+  <path d="M 240,178 L 228,240 L 222,310 L 218,380 L 215,420" class="body-outline"/>
+  <path d="M 240,178 L 235,185 Q 222,240 216,310 L 212,380 L 208,420" class="body-outline"/>
+  <!-- Hand left -->
+  <path d="M 215,420 Q 212,432 208,420" class="body-outline"/>
+
+  <!-- Arms - right -->
+  <path d="M 360,178 L 372,240 L 378,310 L 382,380 L 385,420" class="body-outline"/>
+  <path d="M 360,178 L 365,185 Q 378,240 384,310 L 388,380 L 392,420" class="body-outline"/>
+  <!-- Hand right -->
+  <path d="M 385,420 Q 388,432 392,420" class="body-outline"/>
+
+  <!-- Torso - left side -->
+  <path d="M 240,178 L 248,220 L 254,270 L 250,320 L 252,370 L 260,400 L 270,410" class="body-outline"/>
+
+  <!-- Torso - right side -->
+  <path d="M 360,178 L 352,220 L 346,270 L 350,320 L 348,370 L 340,400 L 330,410" class="body-outline"/>
+
+  <!-- Crotch -->
+  <path d="M 270,410 Q 280,435 300,440 Q 320,435 330,410" class="body-outline"/>
+
+  <!-- Left leg outer -->
+  <path d="M 270,410 L 265,500 L 262,580 L 260,660 L 258,730" class="body-outline"/>
+  <!-- Left leg inner -->
+  <path d="M 300,440 L 295,500 L 290,580 L 285,660 L 280,730" class="body-outline"/>
+
+  <!-- Right leg outer -->
+  <path d="M 330,410 L 335,500 L 338,580 L 340,660 L 342,730" class="body-outline"/>
+  <!-- Right leg inner -->
+  <path d="M 300,440 L 305,500 L 310,580 L 315,660 L 320,730" class="body-outline"/>
+
+  <!-- Left foot -->
+  <path d="M 258,730 Q 254,745 250,750 L 285,750 Q 282,745 280,730" class="body-outline"/>
+
+  <!-- Right foot -->
+  <path d="M 342,730 Q 345,745 350,750 L 315,750 Q 318,745 320,730" class="body-outline"/>
+
+  <!-- ========== MEASUREMENT LINES AND LABELS ========== -->
+
+  <!-- A: Shoulder Width -->
+  <circle cx="28" cy="178" r="10" class="letter-circle"/>
+  <text x="28" y="178" class="letter-text">A</text>
+  <line x1="42" y1="178" x2="237" y2="178" class="connector-line"/>
+  <line x1="240" y1="170" x2="240" y2="186" class="measurement-line-solid"/>
+  <line x1="240" y1="178" x2="360" y2="178" class="measurement-line"/>
+  <line x1="360" y1="170" x2="360" y2="186" class="measurement-line-solid"/>
+  <polygon points="243,175 243,181 237,178" class="arrow-head"/>
+  <polygon points="357,175 357,181 363,178" class="arrow-head"/>
+  <line x1="363" y1="178" x2="460" y2="178" class="connector-line"/>
+  <text x="470" y="182" class="label-text-bold">A. Shoulder Width</text>
+
+  <!-- B: Chest -->
+  <circle cx="28" cy="225" r="10" class="letter-circle"/>
+  <text x="28" y="225" class="letter-text">B</text>
+  <line x1="42" y1="225" x2="245" y2="225" class="connector-line"/>
+  <line x1="248" y1="217" x2="248" y2="233" class="measurement-line-solid"/>
+  <line x1="248" y1="225" x2="352" y2="225" class="measurement-line"/>
+  <line x1="352" y1="217" x2="352" y2="233" class="measurement-line-solid"/>
+  <polygon points="251,222 251,228 245,225" class="arrow-head"/>
+  <polygon points="349,222 349,228 355,225" class="arrow-head"/>
+  <line x1="355" y1="225" x2="460" y2="225" class="connector-line"/>
+  <text x="470" y="229" class="label-text-bold">B. Chest</text>
+
+  <!-- C: Waist -->
+  <circle cx="28" cy="320" r="10" class="letter-circle"/>
+  <text x="28" y="320" class="letter-text">C</text>
+  <line x1="42" y1="320" x2="248" y2="320" class="connector-line"/>
+  <line x1="250" y1="312" x2="250" y2="328" class="measurement-line-solid"/>
+  <line x1="250" y1="320" x2="350" y2="320" class="measurement-line"/>
+  <line x1="350" y1="312" x2="350" y2="328" class="measurement-line-solid"/>
+  <polygon points="253,317 253,323 247,320" class="arrow-head"/>
+  <polygon points="347,317 347,323 353,320" class="arrow-head"/>
+  <line x1="353" y1="320" x2="460" y2="320" class="connector-line"/>
+  <text x="470" y="324" class="label-text-bold">C. Waist</text>
+
+  <!-- D: Hips -->
+  <circle cx="28" cy="400" r="10" class="letter-circle"/>
+  <text x="28" y="400" class="letter-text">D</text>
+  <line x1="42" y1="400" x2="255" y2="400" class="connector-line"/>
+  <line x1="258" y1="392" x2="258" y2="408" class="measurement-line-solid"/>
+  <line x1="258" y1="400" x2="342" y2="400" class="measurement-line"/>
+  <line x1="342" y1="392" x2="342" y2="408" class="measurement-line-solid"/>
+  <polygon points="261,397 261,403 255,400" class="arrow-head"/>
+  <polygon points="339,397 339,403 345,400" class="arrow-head"/>
+  <line x1="345" y1="400" x2="460" y2="400" class="connector-line"/>
+  <text x="470" y="404" class="label-text-bold">D. Hips</text>
+
+  <!-- E: Sleeve Length (right arm) -->
+  <line x1="360" y1="178" x2="392" y2="420" class="measurement-line"/>
+  <polygon points="361,182 358,176 364,176" class="arrow-head"/>
+  <polygon points="391,416 389,422 393,422" class="arrow-head"/>
+  <line x1="395" y1="350" x2="460" y2="300" class="connector-line"/>
+  <circle cx="470" cy="290" r="10" class="letter-circle"/>
+  <text x="470" y="290" class="letter-text">E</text>
+  <text x="485" y="294" class="label-text-bold">E. Sleeve Length</text>
+
+  <!-- F: Inseam (left leg inner) -->
+  <line x1="297" y1="440" x2="283" y2="730" class="measurement-line"/>
+  <polygon points="297,444 294,438 300,438" class="arrow-head"/>
+  <polygon points="283,726 281,732 286,732" class="arrow-head"/>
+  <line x1="283" y1="600" x2="130" y2="580" class="connector-line"/>
+  <circle cx="120" cy="580" r="10" class="letter-circle"/>
+  <text x="120" y="580" class="letter-text">F</text>
+  <text x="55" y="600" class="label-text-bold">F. Inseam</text>
+
+  <!-- G: Outseam (left leg outer) -->
+  <line x1="252" y1="320" x2="260" y2="730" class="measurement-line"/>
+  <polygon points="252,324 250,318 255,318" class="arrow-head"/>
+  <polygon points="260,726 258,732 262,732" class="arrow-head"/>
+  <line x1="256" y1="530" x2="130" y2="510" class="connector-line"/>
+  <circle cx="120" cy="510" r="10" class="letter-circle"/>
+  <text x="120" y="510" class="letter-text">G</text>
+  <text x="42" y="530" class="label-text-bold">G. Outseam</text>
+
+  <!-- H: Neck -->
+  <path d="M 285,155 Q 285,165 300,168 Q 315,165 315,155" class="measurement-line" fill="none"/>
+  <line x1="315" y1="155" x2="460" y2="130" class="connector-line"/>
+  <circle cx="470" cy="125" r="10" class="letter-circle"/>
+  <text x="470" y="125" class="letter-text">H</text>
+  <text x="485" y="129" class="label-text-bold">H. Neck</text>
+
+  <!-- Instruction notes at bottom -->
+  <line x1="100" y1="790" x2="500" y2="790" stroke="#B8860B" stroke-width="0.5"/>
+  <text x="300" y="815" text-anchor="middle" class="subtitle-text">Measure over light clothing for best results</text>
+  <text x="300" y="835" text-anchor="middle" class="subtitle-text">Keep tape measure snug but not tight</text>
+  <text x="300" y="855" text-anchor="middle" class="subtitle-text">Stand naturally with arms relaxed at sides</text>
+  <line x1="100" y1="870" x2="500" y2="870" stroke="#B8860B" stroke-width="0.5"/>
+</svg>

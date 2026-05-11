@@ -1,0 +1,355 @@
+/**
+ * KevinCho Tailoring Manager — Admin Branding
+ *
+ * Brand Colors:
+ *   Primary dark brown: #402417
+ *   Accent luxury gold: #c9a96e
+ *   Light cream:        #fef9e7
+ *   Gold hover:         #b8944f
+ *   Brown light:        #5a3828
+ */
+
+/* ============================================================
+   1. ADMIN SIDEBAR
+   ============================================================ */
+
+#adminmenuback,
+#adminmenuwrap,
+#adminmenu {
+    background: #402417;
+}
+
+/* Top-level menu items */
+#adminmenu a {
+    color: rgba(255,255,255,0.75);
+}
+
+#adminmenu div.wp-menu-image:before {
+    color: rgba(255,255,255,0.65);
+}
+
+/* Hover state */
+#adminmenu li.menu-top:hover,
+#adminmenu li.opensub > a.menu-top,
+#adminmenu li > a.menu-top:focus {
+    background: #5a3828;
+    color: #fff;
+}
+
+#adminmenu li.menu-top:hover div.wp-menu-image:before,
+#adminmenu li.opensub > a.menu-top div.wp-menu-image:before {
+    color: #c9a96e;
+}
+
+/* Current / active menu item */
+#adminmenu .wp-has-current-submenu .wp-submenu .wp-submenu-head,
+#adminmenu .wp-menu-arrow,
+#adminmenu .wp-menu-arrow div,
+#adminmenu li.current a.menu-top,
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu,
+#adminmenu li.wp-has-current-submenu .wp-submenu-head {
+    background: #c9a96e !important;
+    color: #402417 !important;
+}
+
+#adminmenu li.wp-has-current-submenu a.wp-has-current-submenu div.wp-menu-image:before,
+#adminmenu li.current a.menu-top div.wp-menu-image:before {
+    color: #402417;
+}
+
+/* Submenu */
+#adminmenu .wp-submenu,
+#adminmenu .wp-has-current-submenu .wp-submenu,
+#adminmenu .wp-has-current-submenu.opensub .wp-submenu {
+    background: #331c12;
+}
+
+#adminmenu .wp-submenu a {
+    color: rgba(255,255,255,0.65);
+}
+
+#adminmenu .wp-submenu a:hover,
+#adminmenu .wp-submenu a:focus,
+#adminmenu .wp-submenu li.current a {
+    color: #c9a96e;
+}
+
+/* Collapse button */
+#collapse-menu {
+    color: rgba(255,255,255,0.6);
+}
+
+#collapse-menu:hover {
+    color: #c9a96e;
+}
+
+/* Separator */
+#adminmenu li.wp-menu-separator {
+    border-color: rgba(201,169,110,0.15);
+}
+
+/* ============================================================
+   2. ADMIN BAR (TOP BAR)
+   ============================================================ */
+
+#wpadminbar {
+    background: #402417;
+}
+
+#wpadminbar .ab-item,
+#wpadminbar a.ab-item,
+#wpadminbar > #wp-toolbar span.ab-label,
+#wpadminbar > #wp-toolbar span.noticon {
+    color: rgba(255,255,255,0.8);
+}
+
+#wpadminbar a.ab-item:hover,
+#wpadminbar a.ab-item:focus,
+#wpadminbar .ab-top-menu > li:hover > .ab-item,
+#wpadminbar .ab-top-menu > li.hover > .ab-item {
+    background: #5a3828;
+    color: #c9a96e;
+}
+
+#wpadminbar .menupop .ab-sub-wrapper {
+    background: #331c12;
+}
+
+#wpadminbar .quicklinks .menupop ul.ab-sub-secondary,
+#wpadminbar .quicklinks .menupop ul.ab-sub-secondary .ab-submenu {
+    background: #2a1610;
+}
+
+#wpadminbar .ab-submenu .ab-item,
+#wpadminbar .menupop .ab-sub-wrapper a {
+    color: rgba(255,255,255,0.7);
+}
+
+#wpadminbar .menupop .ab-sub-wrapper a:hover,
+#wpadminbar .menupop .ab-sub-wrapper a:focus {
+    color: #c9a96e;
+    background: #5a3828;
+}
+
+/* WordPress logo in admin bar */
+#wpadminbar #wp-admin-bar-wp-logo > .ab-item .ab-icon:before {
+    color: rgba(255,255,255,0.7);
+}
+
+#wpadminbar #wp-admin-bar-wp-logo:hover > .ab-item .ab-icon:before {
+    color: #c9a96e;
+}
+
+/* ============================================================
+   3. BUTTONS
+   ============================================================ */
+
+/* Primary buttons */
+.wp-core-ui .button-primary {
+    background: #c9a96e;
+    border-color: #b8944f;
+    color: #402417;
+    text-shadow: none;
+}
+
+.wp-core-ui .button-primary:hover,
+.wp-core-ui .button-primary:focus {
+    background: #b8944f;
+    border-color: #a6833e;
+    color: #402417;
+}
+
+.wp-core-ui .button-primary:active {
+    background: #a6833e;
+    border-color: #8f7235;
+    color: #402417;
+}
+
+.wp-core-ui .button-primary.focus,
+.wp-core-ui .button-primary:focus {
+    box-shadow: 0 0 0 1px #fff, 0 0 0 3px #c9a96e;
+}
+
+.wp-core-ui .button-primary:disabled,
+.wp-core-ui .button-primary.disabled {
+    background: #d4c4a4 !important;
+    border-color: #c4b494 !important;
+    color: rgba(64,36,23,0.5) !important;
+}
+
+/* ============================================================
+   4. LINKS & ACCENTS
+   ============================================================ */
+
+/* General admin links */
+a {
+    color: #402417;
+}
+
+a:hover,
+a:active,
+a:focus {
+    color: #c9a96e;
+}
+
+/* Focus ring */
+.wp-core-ui select:focus,
+.wp-core-ui input[type="text"]:focus,
+.wp-core-ui input[type="password"]:focus,
+.wp-core-ui input[type="email"]:focus,
+.wp-core-ui input[type="number"]:focus,
+.wp-core-ui input[type="search"]:focus,
+.wp-core-ui input[type="url"]:focus,
+.wp-core-ui textarea:focus {
+    border-color: #c9a96e;
+    box-shadow: 0 0 0 1px #c9a96e;
+}
+
+/* Checkboxes */
+input[type="checkbox"]:checked::before {
+    content: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2020%2020%27%3E%3Cpath%20d%3D%27M14.83%204.89l1.34.94-5.81%208.38H9.02L5.78%209.67l1.34-1.25%202.57%202.4z%27%20fill%3D%27%23c9a96e%27%2F%3E%3C%2Fsvg%3E");
+}
+
+input[type="checkbox"]:focus,
+input[type="radio"]:focus {
+    border-color: #c9a96e;
+    box-shadow: 0 0 0 1px #c9a96e;
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+    background: #c9a96e;
+    border-color: #b8944f;
+}
+
+/* ============================================================
+   5. DASHBOARD WIDGETS & PANELS
+   ============================================================ */
+
+/* Postbox headers */
+.postbox .postbox-header,
+.stuffbox .postbox-header {
+    border-bottom: 2px solid #c9a96e;
+}
+
+.postbox .postbox-header h2,
+.postbox .hndle {
+    color: #402417;
+}
+
+/* Welcome panel */
+.welcome-panel {
+    border-color: #c9a96e;
+}
+
+/* Update nag and notices */
+.update-nag,
+.updated {
+    border-left-color: #c9a96e;
+}
+
+/* ============================================================
+   6. WOOCOMMERCE ADMIN OVERRIDES
+   ============================================================ */
+
+/* WooCommerce tabs */
+.woocommerce .nav-tab-active,
+.woocommerce .nav-tab-active:focus,
+.woocommerce .nav-tab-active:hover {
+    border-bottom-color: #402417;
+    color: #402417;
+}
+
+/* WooCommerce status badges */
+.woocommerce .order-status {
+    border-radius: 3px;
+}
+
+/* WooCommerce sidebar highlights */
+.woocommerce-layout__header {
+    border-bottom: 2px solid #c9a96e;
+}
+
+/* ============================================================
+   7. PAGE TITLES & HEADINGS
+   ============================================================ */
+
+.wrap h1,
+.wrap > h2:first-of-type {
+    color: #402417;
+}
+
+/* Screen options & help tabs */
+#screen-meta-links .show-settings {
+    color: #402417;
+}
+
+#screen-meta-links .show-settings:hover {
+    color: #c9a96e;
+}
+
+/* ============================================================
+   8. PAGINATION & TABLE HIGHLIGHTS
+   ============================================================ */
+
+.tablenav .tablenav-pages a:hover,
+.tablenav .tablenav-pages a:focus {
+    border-color: #c9a96e;
+    color: #402417;
+}
+
+.tablenav .tablenav-pages .current {
+    background: #c9a96e;
+    border-color: #b8944f;
+    color: #402417;
+}
+
+/* Row hover */
+.wp-list-table tbody tr:hover td {
+    background: #fef9e7;
+}
+
+/* ============================================================
+   9. FLUENTCRM & ATUM BRAND HARMONY
+   ============================================================ */
+
+/* FluentCRM sidebar menu active */
+#adminmenu .toplevel_page_fluentcrm-admin .wp-menu-image:before {
+    color: rgba(255,255,255,0.65);
+}
+
+/* ATUM sidebar menu active */
+#adminmenu .toplevel_page_atum-dashboard .wp-menu-image:before {
+    color: rgba(255,255,255,0.65);
+}
+
+/* ============================================================
+   10. ADMIN FOOTER BRANDING
+   ============================================================ */
+
+#wpfooter #footer-left {
+    color: #8c7a65;
+}
+
+#wpfooter #footer-left a {
+    color: #c9a96e;
+}
+
+/* ============================================================
+   11. RESPONSIVE / MOBILE ADMIN
+   ============================================================ */
+
+@media screen and (max-width: 782px) {
+    #wpadminbar {
+        background: #402417;
+    }
+
+    .auto-fold #adminmenu {
+        background: #402417;
+    }
+
+    .auto-fold #adminmenu li.menu-top:hover,
+    .auto-fold #adminmenu li.opensub > a.menu-top {
+        background: #5a3828;
+    }
+}

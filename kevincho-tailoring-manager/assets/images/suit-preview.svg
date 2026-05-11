@@ -1,0 +1,562 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
+  <style>
+    .suit-variant { display: none; }
+    .suit-variant.active { display: block; }
+  </style>
+
+  <defs>
+    <!-- Fabric fill pattern — JS will update this dynamically -->
+    <pattern id="fabric-fill" patternUnits="userSpaceOnUse" width="400" height="600">
+      <rect width="400" height="600" fill="#2c3e50"/>
+    </pattern>
+
+    <!-- Subtle fabric texture overlay -->
+    <pattern id="fabric-texture" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)">
+      <rect width="6" height="6" fill="transparent"/>
+      <line x1="0" y1="0" x2="6" y2="0" stroke="rgba(255,255,255,0.03)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Shadow gradient for depth -->
+    <linearGradient id="jacket-shadow-left" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(0,0,0,0.15)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+    </linearGradient>
+    <linearGradient id="jacket-shadow-right" x1="1" y1="0" x2="0" y2="0">
+      <stop offset="0%" stop-color="rgba(0,0,0,0.15)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+    </linearGradient>
+    <linearGradient id="trouser-crease" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="45%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="50%" stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="55%" stop-color="rgba(0,0,0,0)"/>
+      <stop offset="100%" stop-color="rgba(0,0,0,0)"/>
+    </linearGradient>
+
+    <!-- Clip paths for clean edges -->
+    <clipPath id="jacket-clip">
+      <path d="
+        M 148,72
+        L 130,78 108,95 90,130 78,175 72,220 70,270 68,310 70,340
+        L 72,360 100,365 130,368 155,370 175,371
+        L 200,372
+        L 225,371 245,370 270,368 300,365 328,360
+        L 330,340 332,310 330,270 328,220 322,175 310,130 292,95 270,78 252,72
+        Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- ============================================= -->
+  <!-- SHIRT AND TIE (visible above jacket)          -->
+  <!-- ============================================= -->
+  <g id="shirt-and-tie">
+    <!-- Shirt collar -->
+    <path d="M 168,68 L 155,75 148,90 160,100 178,95 190,82 Z"
+          fill="#f5f0eb" stroke="#e0d8d0" stroke-width="0.8"/>
+    <path d="M 232,68 L 245,75 252,90 240,100 222,95 210,82 Z"
+          fill="#f5f0eb" stroke="#e0d8d0" stroke-width="0.8"/>
+
+    <!-- Shirt visible V -->
+    <path d="M 178,95 L 200,170 L 222,95"
+          fill="#f5f0eb" stroke="#e0d8d0" stroke-width="0.5"/>
+
+    <!-- Tie -->
+    <path d="M 193,88 L 188,100 186,130 184,160 190,180 196,200 200,210 204,200 210,180 216,160 214,130 212,100 207,88 200,92 Z"
+          fill="#8b0000" stroke="#6b0000" stroke-width="0.6"/>
+    <!-- Tie knot -->
+    <path d="M 195,86 L 193,92 200,96 207,92 205,86 200,83 Z"
+          fill="#9b1010" stroke="#6b0000" stroke-width="0.5"/>
+    <!-- Tie dimple/detail -->
+    <line x1="200" y1="96" x2="200" y2="110" stroke="#6b0000" stroke-width="0.4" opacity="0.5"/>
+  </g>
+
+  <!-- ============================================= -->
+  <!-- MAIN SUIT BODY (fabric-filled)                -->
+  <!-- ============================================= -->
+  <g id="suit-body" fill="url(#fabric-fill)" stroke="#1a1a2e" stroke-width="0.8">
+
+    <!-- ===== JACKET BODY ===== -->
+    <!-- Left jacket panel -->
+    <path d="
+      M 170,72
+      L 155,75 148,80 135,88 120,100 108,118 96,142 86,170 80,200
+      L 76,230 73,260 71,290 70,315 70,335 72,355 74,362
+      L 100,365 130,368 155,370 175,371 198,372
+      L 200,210 200,170
+      L 192,100 185,85 178,78 170,72
+      Z"
+      stroke-linejoin="round"/>
+
+    <!-- Right jacket panel -->
+    <path d="
+      M 230,72
+      L 245,75 252,80 265,88 280,100 292,118 304,142 314,170 320,200
+      L 324,230 327,260 329,290 330,315 330,335 328,355 326,362
+      L 300,365 270,368 245,370 225,371 202,372
+      L 200,210 200,170
+      L 208,100 215,85 222,78 230,72
+      Z"
+      stroke-linejoin="round"/>
+
+    <!-- Left shoulder -->
+    <path d="
+      M 170,72
+      L 148,68 125,66 105,68 88,74 76,82 68,92 62,105
+      L 60,112 64,118 72,120 80,118 90,118
+      L 96,142 108,118 120,100 135,88 148,80 155,75 170,72
+      Z"
+      stroke-linejoin="round"/>
+
+    <!-- Right shoulder -->
+    <path d="
+      M 230,72
+      L 252,68 275,66 295,68 312,74 324,82 332,92 338,105
+      L 340,112 336,118 328,120 320,118 310,118
+      L 304,142 292,118 280,100 265,88 252,80 245,75 230,72
+      Z"
+      stroke-linejoin="round"/>
+
+    <!-- Left sleeve -->
+    <path d="
+      M 60,112
+      L 56,140 52,170 48,200 46,235 46,270 48,305 50,335 52,358 55,375 58,385
+      L 64,388 72,388 82,385 90,378
+      L 88,345 86,310 84,280 82,250 80,220 80,200 82,175 86,155 90,138 90,118
+      L 80,118 72,120 64,118 60,112
+      Z"
+      stroke-linejoin="round"/>
+
+    <!-- Right sleeve -->
+    <path d="
+      M 340,112
+      L 344,140 348,170 352,200 354,235 354,270 352,305 350,335 348,358 345,375 342,385
+      L 336,388 328,388 318,385 310,378
+      L 312,345 314,310 316,280 318,250 320,220 320,200 318,175 314,155 310,138 310,118
+      L 320,118 328,120 336,118 340,112
+      Z"
+      stroke-linejoin="round"/>
+
+    <!-- ===== TROUSERS ===== -->
+    <!-- Left trouser leg -->
+    <path d="
+      M 120,360
+      L 110,370 105,385 100,410 98,440 96,475 96,510 97,545 98,570 100,588 102,598
+      L 108,600 158,600
+      L 160,598 162,588 165,560 168,530 172,500 176,470 180,440 185,410 192,385 198,372
+      Z"
+      stroke-linejoin="round"/>
+
+    <!-- Right trouser leg -->
+    <path d="
+      M 280,360
+      L 290,370 295,385 300,410 302,440 304,475 304,510 303,545 302,570 300,588 298,598
+      L 292,600 242,600
+      L 240,598 238,588 235,560 232,530 228,500 224,470 220,440 215,410 208,385 202,372
+      Z"
+      stroke-linejoin="round"/>
+
+    <!-- Trouser waistband area (belt line) -->
+    <path d="
+      M 120,360
+      L 130,362 155,366 175,369 200,372 225,369 245,366 270,362 280,360
+      L 278,355 260,350 240,348 220,347 200,346 180,347 160,348 140,350 122,355
+      Z"
+      stroke-linejoin="round"/>
+  </g>
+
+  <!-- ===== FABRIC TEXTURE OVERLAY ===== -->
+  <g id="suit-texture" fill="url(#fabric-texture)" stroke="none" opacity="0.6">
+    <path d="
+      M 170,72 L 155,75 148,80 135,88 120,100 108,118 96,142 86,170 80,200
+      L 76,230 73,260 71,290 70,315 70,335 72,355 74,362
+      L 100,365 130,368 155,370 175,371 198,372
+      L 200,210 200,170 192,100 185,85 178,78 170,72 Z"/>
+    <path d="
+      M 230,72 L 245,75 252,80 265,88 280,100 292,118 304,142 314,170 320,200
+      L 324,230 327,260 329,290 330,315 330,335 328,355 326,362
+      L 300,365 270,368 245,370 225,371 202,372
+      L 200,210 200,170 208,100 215,85 222,78 230,72 Z"/>
+  </g>
+
+  <!-- ===== JACKET SHADING FOR DEPTH ===== -->
+  <g id="suit-shading" stroke="none" opacity="0.5">
+    <!-- Left side shadow -->
+    <path d="
+      M 80,200 L 76,230 73,260 71,290 70,315 70,335 72,355 74,362
+      L 100,365 110,366
+      L 105,340 100,310 96,280 93,250 90,220 88,200 86,180 88,160
+      Z"
+      fill="url(#jacket-shadow-left)"/>
+    <!-- Right side shadow -->
+    <path d="
+      M 320,200 L 324,230 327,260 329,290 330,315 330,335 328,355 326,362
+      L 300,365 290,366
+      L 295,340 300,310 304,280 307,250 310,220 312,200 314,180 312,160
+      Z"
+      fill="url(#jacket-shadow-right)"/>
+  </g>
+
+  <!-- ===== JACKET CONSTRUCTION DETAILS ===== -->
+  <g id="jacket-details" fill="none" stroke="#1a1a2e" stroke-width="0.6" opacity="0.6">
+    <!-- Center front seam -->
+    <line x1="200" y1="210" x2="200" y2="372" stroke-dasharray="2,4" opacity="0.3"/>
+
+    <!-- Left front dart -->
+    <path d="M 150,160 L 148,220 150,280" opacity="0.25"/>
+    <!-- Right front dart -->
+    <path d="M 250,160 L 252,220 250,280" opacity="0.25"/>
+
+    <!-- Left armhole seam -->
+    <path d="M 90,118 Q 92,130 96,142" stroke-width="0.5"/>
+    <!-- Right armhole seam -->
+    <path d="M 310,118 Q 308,130 304,142" stroke-width="0.5"/>
+
+    <!-- Left sleeve cuff lines -->
+    <path d="M 58,378 Q 68,382 82,378" opacity="0.5"/>
+    <path d="M 59,374 Q 69,378 81,374" opacity="0.35"/>
+    <path d="M 60,370 Q 70,374 80,370" opacity="0.2"/>
+
+    <!-- Right sleeve cuff lines -->
+    <path d="M 318,378 Q 328,382 342,378" opacity="0.5"/>
+    <path d="M 319,374 Q 329,378 341,374" opacity="0.35"/>
+    <path d="M 320,370 Q 330,374 340,370" opacity="0.2"/>
+
+    <!-- Left sleeve button detail (surgeon's cuff) -->
+    <circle cx="65" cy="370" r="2" fill="#1a1a2e" opacity="0.3"/>
+    <circle cx="69" cy="366" r="2" fill="#1a1a2e" opacity="0.3"/>
+    <circle cx="73" cy="362" r="2" fill="#1a1a2e" opacity="0.3"/>
+    <circle cx="77" cy="358" r="2" fill="#1a1a2e" opacity="0.3"/>
+
+    <!-- Right sleeve button detail -->
+    <circle cx="335" cy="370" r="2" fill="#1a1a2e" opacity="0.3"/>
+    <circle cx="331" cy="366" r="2" fill="#1a1a2e" opacity="0.3"/>
+    <circle cx="327" cy="362" r="2" fill="#1a1a2e" opacity="0.3"/>
+    <circle cx="323" cy="358" r="2" fill="#1a1a2e" opacity="0.3"/>
+
+    <!-- Shoulder seam left -->
+    <path d="M 170,72 L 148,68 125,66 105,68 88,74" stroke-width="0.8" opacity="0.4"/>
+    <!-- Shoulder seam right -->
+    <path d="M 230,72 L 252,68 275,66 295,68 312,74" stroke-width="0.8" opacity="0.4"/>
+  </g>
+
+  <!-- ===== BREAST POCKET (left chest) ===== -->
+  <g id="breast-pocket" stroke="#1a1a2e" stroke-width="0.7" fill="none" opacity="0.55">
+    <path d="M 145,165 L 145,185 L 170,185 L 170,165"/>
+    <!-- Pocket square hint -->
+    <path d="M 150,165 L 153,158 157,162 161,155 165,162 168,165"
+          fill="url(#fabric-fill)" stroke="#1a1a2e" stroke-width="0.5" opacity="0.7"/>
+  </g>
+
+  <!-- ===== LAPEL FLOWER HOLE (boutonniere) ===== -->
+  <g id="lapel-flower-hole" opacity="0.5">
+    <!-- Small buttonhole on left lapel -->
+    <ellipse cx="158" cy="140" rx="2.5" ry="4" fill="none" stroke="#1a1a2e" stroke-width="0.6"
+             transform="rotate(-15, 158, 140)"/>
+  </g>
+
+  <!-- ===== TROUSER DETAILS ===== -->
+  <g id="trouser-details" fill="none" stroke="#1a1a2e" opacity="0.35">
+    <!-- Left trouser crease -->
+    <line x1="130" y1="385" x2="128" y2="598" stroke-width="0.6"/>
+    <!-- Right trouser crease -->
+    <line x1="270" y1="385" x2="272" y2="598" stroke-width="0.6"/>
+
+    <!-- Belt -->
+    <path d="M 120,355 Q 160,348 200,346 Q 240,348 280,355"
+          stroke="#1a1a2e" stroke-width="1.5" opacity="0.5"/>
+    <!-- Belt buckle -->
+    <rect x="192" y="348" width="16" height="10" rx="2" stroke-width="0.8" opacity="0.5"
+          fill="none" stroke="#1a1a2e"/>
+
+    <!-- Fly front -->
+    <line x1="200" y1="358" x2="200" y2="410" stroke-width="0.5" opacity="0.4"/>
+
+    <!-- Left trouser cuff -->
+    <path d="M 102,594 L 158,594" stroke-width="0.8" opacity="0.4"/>
+    <!-- Right trouser cuff -->
+    <path d="M 242,594 L 298,594" stroke-width="0.8" opacity="0.4"/>
+  </g>
+
+  <!-- Trouser crease highlight overlay -->
+  <g id="trouser-crease-overlay" opacity="0.4">
+    <rect x="105" y="385" width="50" height="213" fill="url(#trouser-crease)"/>
+    <rect x="245" y="385" width="50" height="213" fill="url(#trouser-crease)"/>
+  </g>
+
+  <!-- ============================================= -->
+  <!-- LAPEL VARIANTS                                -->
+  <!-- ============================================= -->
+
+  <!-- NOTCH LAPEL (default) -->
+  <g id="lapel-notch" class="suit-variant active">
+    <!-- Left notch lapel -->
+    <path d="
+      M 192,100
+      L 185,85 178,78 170,72 162,70 155,72
+      L 148,80 140,92 132,108 130,115
+      L 138,112 148,105
+      L 155,118 158,125 160,135 160,150 158,175 155,200 152,220 150,240
+      L 155,250 165,255 180,258 200,258
+      L 200,210 200,170
+      Z"
+      fill="url(#fabric-fill)" stroke="#1a1a2e" stroke-width="1" stroke-linejoin="round"/>
+    <!-- Left notch cut -->
+    <path d="M 130,115 L 138,112 148,105"
+          fill="none" stroke="#1a1a2e" stroke-width="1.2"/>
+    <!-- Left lapel roll line -->
+    <path d="M 170,80 Q 165,130 160,180 Q 158,210 165,250"
+          fill="none" stroke="#1a1a2e" stroke-width="0.4" opacity="0.35" stroke-dasharray="3,3"/>
+
+    <!-- Right notch lapel -->
+    <path d="
+      M 208,100
+      L 215,85 222,78 230,72 238,70 245,72
+      L 252,80 260,92 268,108 270,115
+      L 262,112 252,105
+      L 245,118 242,125 240,135 240,150 242,175 245,200 248,220 250,240
+      L 245,250 235,255 220,258 200,258
+      L 200,210 200,170
+      Z"
+      fill="url(#fabric-fill)" stroke="#1a1a2e" stroke-width="1" stroke-linejoin="round"/>
+    <!-- Right notch cut -->
+    <path d="M 270,115 L 262,112 252,105"
+          fill="none" stroke="#1a1a2e" stroke-width="1.2"/>
+    <!-- Right lapel roll line -->
+    <path d="M 230,80 Q 235,130 240,180 Q 242,210 235,250"
+          fill="none" stroke="#1a1a2e" stroke-width="0.4" opacity="0.35" stroke-dasharray="3,3"/>
+  </g>
+
+  <!-- PEAK LAPEL -->
+  <g id="lapel-peak" class="suit-variant">
+    <!-- Left peak lapel -->
+    <path d="
+      M 192,100
+      L 185,85 178,78 170,72 162,70 155,72
+      L 148,80 140,92 132,108 125,118
+      L 120,100 118,92
+      L 130,95 142,100
+      L 152,115 156,128 158,145 158,170 156,200 154,225 152,245
+      L 158,252 168,256 182,258 200,258
+      L 200,210 200,170
+      Z"
+      fill="url(#fabric-fill)" stroke="#1a1a2e" stroke-width="1" stroke-linejoin="round"/>
+    <!-- Left peak point -->
+    <path d="M 125,118 L 120,100 118,92 L 130,95 142,100"
+          fill="url(#fabric-fill)" stroke="#1a1a2e" stroke-width="1.2"/>
+    <!-- Left lapel roll line -->
+    <path d="M 168,82 Q 162,135 158,185 Q 156,215 162,250"
+          fill="none" stroke="#1a1a2e" stroke-width="0.4" opacity="0.35" stroke-dasharray="3,3"/>
+
+    <!-- Right peak lapel -->
+    <path d="
+      M 208,100
+      L 215,85 222,78 230,72 238,70 245,72
+      L 252,80 260,92 268,108 275,118
+      L 280,100 282,92
+      L 270,95 258,100
+      L 248,115 244,128 242,145 242,170 244,200 246,225 248,245
+      L 242,252 232,256 218,258 200,258
+      L 200,210 200,170
+      Z"
+      fill="url(#fabric-fill)" stroke="#1a1a2e" stroke-width="1" stroke-linejoin="round"/>
+    <!-- Right peak point -->
+    <path d="M 275,118 L 280,100 282,92 L 270,95 258,100"
+          fill="url(#fabric-fill)" stroke="#1a1a2e" stroke-width="1.2"/>
+    <!-- Right lapel roll line -->
+    <path d="M 232,82 Q 238,135 242,185 Q 244,215 238,250"
+          fill="none" stroke="#1a1a2e" stroke-width="0.4" opacity="0.35" stroke-dasharray="3,3"/>
+  </g>
+
+  <!-- SHAWL LAPEL -->
+  <g id="lapel-shawl" class="suit-variant">
+    <!-- Left shawl collar — continuous curve, no notch -->
+    <path d="
+      M 192,100
+      L 185,85 178,78 170,72 162,70 155,72
+      L 148,80 138,92 128,110 122,125
+      Q 128,118 138,115 148,115 155,120
+      Q 160,128 162,145 162,170 160,200 156,230 154,248
+      L 158,254 168,258 182,260 200,260
+      L 200,210 200,170
+      Z"
+      fill="url(#fabric-fill)" stroke="#1a1a2e" stroke-width="1" stroke-linejoin="round"/>
+    <!-- Left shawl smooth edge -->
+    <path d="M 122,125 Q 128,118 138,115 Q 148,115 155,120"
+          fill="none" stroke="#1a1a2e" stroke-width="0.8"/>
+    <!-- Left lapel roll line -->
+    <path d="M 168,82 Q 164,130 162,180 Q 160,215 164,252"
+          fill="none" stroke="#1a1a2e" stroke-width="0.4" opacity="0.35" stroke-dasharray="3,3"/>
+
+    <!-- Right shawl collar -->
+    <path d="
+      M 208,100
+      L 215,85 222,78 230,72 238,70 245,72
+      L 252,80 262,92 272,110 278,125
+      Q 272,118 262,115 252,115 245,120
+      Q 240,128 238,145 238,170 240,200 244,230 246,248
+      L 242,254 232,258 218,260 200,260
+      L 200,210 200,170
+      Z"
+      fill="url(#fabric-fill)" stroke="#1a1a2e" stroke-width="1" stroke-linejoin="round"/>
+    <!-- Right shawl smooth edge -->
+    <path d="M 278,125 Q 272,118 262,115 Q 252,115 245,120"
+          fill="none" stroke="#1a1a2e" stroke-width="0.8"/>
+    <!-- Right lapel roll line -->
+    <path d="M 232,82 Q 236,130 238,180 Q 240,215 236,252"
+          fill="none" stroke="#1a1a2e" stroke-width="0.4" opacity="0.35" stroke-dasharray="3,3"/>
+  </g>
+
+  <!-- ============================================= -->
+  <!-- POCKET VARIANTS                               -->
+  <!-- ============================================= -->
+
+  <!-- PATCH POCKETS -->
+  <g id="pocket-patch" class="suit-variant active">
+    <!-- Left patch pocket -->
+    <rect x="112" y="260" width="55" height="42" rx="3"
+          fill="url(#fabric-fill)" stroke="#1a1a2e" stroke-width="0.9" opacity="0.85"/>
+    <!-- Left pocket flap -->
+    <path d="M 110,258 L 110,266 L 169,266 L 169,258"
+          fill="url(#fabric-fill)" stroke="#1a1a2e" stroke-width="0.8" opacity="0.85"/>
+    <!-- Left pocket shadow -->
+    <line x1="112" y1="302" x2="167" y2="302" stroke="#1a1a2e" stroke-width="0.4" opacity="0.3"/>
+
+    <!-- Right patch pocket -->
+    <rect x="233" y="260" width="55" height="42" rx="3"
+          fill="url(#fabric-fill)" stroke="#1a1a2e" stroke-width="0.9" opacity="0.85"/>
+    <!-- Right pocket flap -->
+    <path d="M 231,258 L 231,266 L 290,266 L 290,258"
+          fill="url(#fabric-fill)" stroke="#1a1a2e" stroke-width="0.8" opacity="0.85"/>
+    <!-- Right pocket shadow -->
+    <line x1="233" y1="302" x2="288" y2="302" stroke="#1a1a2e" stroke-width="0.4" opacity="0.3"/>
+  </g>
+
+  <!-- WELT (JETTED) POCKETS -->
+  <g id="pocket-welt" class="suit-variant">
+    <!-- Left welt pocket — two thin parallel lines -->
+    <line x1="115" y1="268" x2="170" y2="268" stroke="#1a1a2e" stroke-width="0.9" opacity="0.7"/>
+    <line x1="115" y1="273" x2="170" y2="273" stroke="#1a1a2e" stroke-width="0.9" opacity="0.7"/>
+    <!-- Welt fill between lines -->
+    <rect x="115" y="268" width="55" height="5" fill="#1a1a2e" opacity="0.08"/>
+
+    <!-- Right welt pocket -->
+    <line x1="230" y1="268" x2="285" y2="268" stroke="#1a1a2e" stroke-width="0.9" opacity="0.7"/>
+    <line x1="230" y1="273" x2="285" y2="273" stroke="#1a1a2e" stroke-width="0.9" opacity="0.7"/>
+    <!-- Welt fill between lines -->
+    <rect x="230" y="268" width="55" height="5" fill="#1a1a2e" opacity="0.08"/>
+  </g>
+
+  <!-- FLAP POCKETS -->
+  <g id="pocket-flap" class="suit-variant">
+    <!-- Left flap pocket -->
+    <line x1="112" y1="265" x2="170" y2="265" stroke="#1a1a2e" stroke-width="0.8" opacity="0.6"/>
+    <!-- Left flap -->
+    <path d="M 110,265 L 110,280 Q 140,284 172,280 L 172,265 Z"
+          fill="url(#fabric-fill)" stroke="#1a1a2e" stroke-width="0.9" opacity="0.85"/>
+    <!-- Flap bottom shadow -->
+    <path d="M 112,280 Q 140,284 170,280"
+          fill="none" stroke="#1a1a2e" stroke-width="0.4" opacity="0.4"/>
+
+    <!-- Right flap pocket -->
+    <line x1="230" y1="265" x2="288" y2="265" stroke="#1a1a2e" stroke-width="0.8" opacity="0.6"/>
+    <!-- Right flap -->
+    <path d="M 228,265 L 228,280 Q 258,284 290,280 L 290,265 Z"
+          fill="url(#fabric-fill)" stroke="#1a1a2e" stroke-width="0.9" opacity="0.85"/>
+    <!-- Flap bottom shadow -->
+    <path d="M 230,280 Q 258,284 288,280"
+          fill="none" stroke="#1a1a2e" stroke-width="0.4" opacity="0.4"/>
+  </g>
+
+  <!-- NO POCKETS -->
+  <g id="pocket-none" class="suit-variant">
+    <!-- Empty group — no pockets -->
+  </g>
+
+  <!-- ============================================= -->
+  <!-- BUTTON VARIANTS                               -->
+  <!-- ============================================= -->
+
+  <!-- TWO BUTTONS (default) -->
+  <g id="buttons-2" class="suit-variant active">
+    <!-- Upper button -->
+    <circle cx="200" cy="225" r="5" fill="#1a1a2e" opacity="0.6" stroke="#0d0d1a" stroke-width="0.5"/>
+    <circle cx="200" cy="225" r="2" fill="none" stroke="#0d0d1a" stroke-width="0.3" opacity="0.5"/>
+    <!-- Lower button -->
+    <circle cx="200" cy="260" r="5" fill="#1a1a2e" opacity="0.6" stroke="#0d0d1a" stroke-width="0.5"/>
+    <circle cx="200" cy="260" r="2" fill="none" stroke="#0d0d1a" stroke-width="0.3" opacity="0.5"/>
+    <!-- Button thread crosses -->
+    <g stroke="#0d0d1a" stroke-width="0.3" opacity="0.4">
+      <line x1="198" y1="223" x2="202" y2="227"/>
+      <line x1="202" y1="223" x2="198" y2="227"/>
+      <line x1="198" y1="258" x2="202" y2="262"/>
+      <line x1="202" y1="258" x2="198" y2="262"/>
+    </g>
+  </g>
+
+  <!-- ONE BUTTON -->
+  <g id="buttons-1" class="suit-variant">
+    <!-- Single button, centered -->
+    <circle cx="200" cy="240" r="6" fill="#1a1a2e" opacity="0.6" stroke="#0d0d1a" stroke-width="0.5"/>
+    <circle cx="200" cy="240" r="2.5" fill="none" stroke="#0d0d1a" stroke-width="0.3" opacity="0.5"/>
+    <!-- Button thread cross -->
+    <g stroke="#0d0d1a" stroke-width="0.3" opacity="0.4">
+      <line x1="198" y1="238" x2="202" y2="242"/>
+      <line x1="202" y1="238" x2="198" y2="242"/>
+    </g>
+  </g>
+
+  <!-- THREE BUTTONS -->
+  <g id="buttons-3" class="suit-variant">
+    <!-- Top button -->
+    <circle cx="200" cy="205" r="4.5" fill="#1a1a2e" opacity="0.6" stroke="#0d0d1a" stroke-width="0.5"/>
+    <circle cx="200" cy="205" r="1.8" fill="none" stroke="#0d0d1a" stroke-width="0.3" opacity="0.5"/>
+    <!-- Middle button -->
+    <circle cx="200" cy="237" r="4.5" fill="#1a1a2e" opacity="0.6" stroke="#0d0d1a" stroke-width="0.5"/>
+    <circle cx="200" cy="237" r="1.8" fill="none" stroke="#0d0d1a" stroke-width="0.3" opacity="0.5"/>
+    <!-- Bottom button -->
+    <circle cx="200" cy="269" r="4.5" fill="#1a1a2e" opacity="0.6" stroke="#0d0d1a" stroke-width="0.5"/>
+    <circle cx="200" cy="269" r="1.8" fill="none" stroke="#0d0d1a" stroke-width="0.3" opacity="0.5"/>
+    <!-- Button thread crosses -->
+    <g stroke="#0d0d1a" stroke-width="0.3" opacity="0.4">
+      <line x1="198" y1="203" x2="202" y2="207"/>
+      <line x1="202" y1="203" x2="198" y2="207"/>
+      <line x1="198" y1="235" x2="202" y2="239"/>
+      <line x1="202" y1="235" x2="198" y2="239"/>
+      <line x1="198" y1="267" x2="202" y2="271"/>
+      <line x1="202" y1="267" x2="198" y2="271"/>
+    </g>
+  </g>
+
+  <!-- ============================================= -->
+  <!-- VENT VARIANTS (back detail hints at sides)    -->
+  <!-- ============================================= -->
+
+  <!-- CENTER VENT (default) -->
+  <g id="vent-center" class="suit-variant active">
+    <!-- Center vent line visible at jacket hem -->
+    <line x1="200" y1="340" x2="200" y2="372" stroke="#1a1a2e" stroke-width="0.8" opacity="0.4"/>
+    <!-- Small vent opening shadow -->
+    <path d="M 197,365 L 200,372 L 203,365" fill="none" stroke="#1a1a2e" stroke-width="0.5" opacity="0.3"/>
+  </g>
+
+  <!-- SIDE VENTS -->
+  <g id="vent-side" class="suit-variant">
+    <!-- Left side vent -->
+    <line x1="135" y1="335" x2="135" y2="370" stroke="#1a1a2e" stroke-width="0.8" opacity="0.4"/>
+    <path d="M 132,363 L 135,370 L 138,363" fill="none" stroke="#1a1a2e" stroke-width="0.5" opacity="0.3"/>
+    <!-- Right side vent -->
+    <line x1="265" y1="335" x2="265" y2="370" stroke="#1a1a2e" stroke-width="0.8" opacity="0.4"/>
+    <path d="M 262,363 L 265,370 L 268,363" fill="none" stroke="#1a1a2e" stroke-width="0.5" opacity="0.3"/>
+  </g>
+
+  <!-- NO VENT -->
+  <g id="vent-none" class="suit-variant">
+    <!-- Clean hem, no vent lines -->
+  </g>
+
+  <!-- ===== JACKET HEM EDGE (always on top) ===== -->
+  <g id="jacket-hem" fill="none" stroke="#1a1a2e" stroke-width="0.6" opacity="0.5">
+    <path d="M 74,362 Q 100,368 140,371 Q 170,373 200,374 Q 230,373 260,371 Q 300,368 326,362"/>
+  </g>
+
+</svg>

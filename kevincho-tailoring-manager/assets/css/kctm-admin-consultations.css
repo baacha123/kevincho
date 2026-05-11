@@ -1,0 +1,44 @@
+/* ==========================================================================
+   KevinCho Tailoring Manager - Admin Consultation Styles
+   ========================================================================== */
+
+/* Status badges */
+.kctm-status-badge {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+.kctm-status-pending { background: #fff3cd; color: #856404; }
+.kctm-status-confirmed { background: #cce5ff; color: #004085; }
+.kctm-status-completed { background: #d4edda; color: #155724; }
+.kctm-status-cancelled { background: #f8d7da; color: #721c24; }
+.kctm-status-no-show { background: #e2e3e5; color: #383d41; }
+.kctm-status-paid { background: #d4edda; color: #155724; }
+.kctm-status-unpaid { background: #fff3cd; color: #856404; }
+.kctm-status-refunded { background: #e2e3e5; color: #383d41; }
+
+/* Schedule grid */
+.kctm-schedule-table { border-collapse: collapse; width: 100%; }
+.kctm-schedule-table th, .kctm-schedule-table td { padding: 8px; text-align: center; border: 1px solid #ccd0d4; }
+.kctm-schedule-table th { background: #f0f0f1; }
+.kctm-schedule-table input[type="checkbox"] { width: 18px; height: 18px; }
+
+/* Blocked dates list */
+.kctm-blocked-dates-list { list-style: none; padding: 0; }
+.kctm-blocked-dates-list li { display: flex; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid #f0f0f1; }
+.kctm-blocked-dates-list .delete { color: #d63638; text-decoration: none; }
+.kctm-blocked-dates-list .delete:hover { text-decoration: underline; }
+
+/* Edit page */
+.kctm-edit-booking .form-table th { width: 180px; }
+.kctm-resend-btn { margin-left: 10px; }
+
+/* Dashboard widget */
+.kctm-consultation-stats { display: flex; gap: 15px; flex-wrap: wrap; }
+.kctm-consultation-stat { flex: 1; min-width: 100px; text-align: center; padding: 15px; background: #f0f0f1; border-radius: 4px; }
+.kctm-consultation-stat .count { font-size: 24px; font-weight: 700; display: block; }
+.kctm-consultation-stat .label { font-size: 12px; color: #666; }

@@ -1,0 +1,603 @@
+/* ==========================================================================
+   KevinCho Tailoring Manager - Consultation Booking Frontend Styles
+   Brand palette:
+     Primary dark:  #402417 (dark brown)
+     Accent gold:   #c9a96e (luxury gold)
+     Dark navy:     #1a1a2e
+     Light gold bg: #fef9e7
+   ========================================================================== */
+
+/* Container */
+.kctm-consultation-booking {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px 30px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #1a1a1a;
+    line-height: 1.6;
+    overflow-wrap: break-word;
+    word-wrap: break-word;
+    box-sizing: border-box;
+}
+
+/* Steps - hidden by default */
+.kctm-step {
+    display: none;
+}
+
+.kctm-step:first-child {
+    display: block;
+}
+
+/* Hero / Intro Section */
+.kctm-consultation-hero {
+    text-align: center;
+    padding: 30px 0 20px;
+}
+
+.kctm-consultation-hero h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    letter-spacing: -0.5px;
+}
+
+.kctm-consultation-hero p {
+    font-size: 16px;
+    color: #555;
+    max-width: 500px;
+    margin: 0 auto 20px;
+}
+
+/* Price highlight */
+.kctm-consultation-price {
+    font-size: 32px;
+    font-weight: 700;
+    color: #402417;
+    margin: 15px 0;
+}
+
+.kctm-consultation-price small {
+    font-size: 14px;
+    font-weight: 400;
+    color: #777;
+    display: block;
+    margin-top: 4px;
+}
+
+/* Details list */
+.kctm-consultation-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 400px;
+    text-align: left;
+}
+
+.kctm-consultation-details ul li {
+    padding: 8px 0;
+    font-size: 15px;
+    color: #444;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.kctm-consultation-details ul li:last-child {
+    border-bottom: none;
+}
+
+.kctm-consultation-details ul li::before {
+    content: '\2713';
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+    background: #c9a96e;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 12px;
+    flex-shrink: 0;
+}
+
+/* Buttons */
+.kctm-btn {
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+    transition: all 0.2s ease;
+    letter-spacing: 0.3px;
+}
+
+.kctm-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.kctm-btn-primary {
+    background: #402417;
+    color: #fff;
+    border-color: #402417;
+}
+
+.kctm-btn-primary:hover {
+    background: #c9a96e;
+    border-color: #c9a96e;
+    color: #fff;
+}
+
+.kctm-btn-primary:disabled:hover {
+    background: #402417;
+    border-color: #402417;
+}
+
+.kctm-btn-secondary {
+    background: transparent;
+    color: #555;
+    border-color: #ccc;
+}
+
+.kctm-btn-secondary:hover {
+    border-color: #c9a96e;
+    color: #402417;
+}
+
+.kctm-btn-block {
+    display: block;
+    width: 100%;
+}
+
+/* Step header */
+.kctm-step-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #c9a96e;
+}
+
+.kctm-step-header h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    color: #1a1a1a;
+}
+
+.kctm-step-number {
+    font-size: 13px;
+    color: #c9a96e;
+    font-weight: 600;
+}
+
+/* ==========================================================================
+   Calendar
+   ========================================================================== */
+
+.kctm-calendar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.kctm-calendar-nav button {
+    background: none;
+    border: 1px solid #ddd;
+    padding: 6px 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 14px;
+    color: #555;
+    transition: all 0.15s ease;
+}
+
+.kctm-calendar-nav button:hover {
+    border-color: #c9a96e;
+    color: #c9a96e;
+}
+
+#kctm-calendar-month-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+/* Calendar grid */
+.kctm-cal-header {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+    margin-bottom: 4px;
+}
+
+.kctm-cal-day-name {
+    text-align: center;
+    font-size: 12px;
+    font-weight: 600;
+    color: #999;
+    text-transform: uppercase;
+    padding: 8px 0;
+    letter-spacing: 0.5px;
+}
+
+.kctm-cal-body {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+}
+
+.kctm-cal-cell {
+    aspect-ratio: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 4px;
+    transition: all 0.15s ease;
+    user-select: none;
+}
+
+.kctm-cal-empty {
+    background: transparent;
+}
+
+/* Past dates */
+.kctm-cal-past {
+    color: #ccc;
+    background: #fafafa;
+    cursor: default;
+}
+
+/* Unavailable dates */
+.kctm-cal-unavailable {
+    color: #bbb;
+    background: #f5f5f5;
+    cursor: default;
+    text-decoration: line-through;
+}
+
+/* Available dates */
+.kctm-cal-available {
+    color: #1a1a1a;
+    background: #fef9e7;
+    cursor: pointer;
+    border: 1px solid #e8dcc5;
+}
+
+.kctm-cal-available:hover {
+    background: #f5ebd6;
+    border-color: #c9a96e;
+}
+
+/* Selected date */
+.kctm-cal-selected,
+.kctm-cal-selected:hover {
+    background: #402417 !important;
+    color: #fff !important;
+    border-color: #402417 !important;
+}
+
+/* ==========================================================================
+   Time Slots
+   ========================================================================== */
+
+#kctm-selected-date-label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.kctm-time-slots {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.kctm-time-slot {
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    background: #fff;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.15s ease;
+    color: #333;
+}
+
+.kctm-time-slot:hover {
+    border-color: #c9a96e;
+    color: #402417;
+}
+
+.kctm-time-selected,
+.kctm-time-selected:hover {
+    background: #402417;
+    border-color: #402417;
+    color: #fff;
+}
+
+/* ==========================================================================
+   Contact Form
+   ========================================================================== */
+
+.kctm-form-group {
+    margin-bottom: 20px;
+}
+
+.kctm-form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 6px;
+}
+
+.kctm-form-group label .required {
+    color: #d63638;
+}
+
+.kctm-input {
+    width: 100%;
+    padding: 10px 14px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #fff;
+    color: #1a1a1a;
+    transition: border-color 0.15s ease;
+    box-sizing: border-box;
+}
+
+.kctm-input:focus {
+    outline: none;
+    border-color: #c9a96e;
+    box-shadow: 0 0 0 2px rgba(201, 169, 110, 0.2);
+}
+
+textarea.kctm-input {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.kctm-form-row {
+    display: flex;
+    gap: 15px;
+}
+
+.kctm-form-row .kctm-form-group {
+    flex: 1;
+}
+
+/* ==========================================================================
+   Summary Card
+   ========================================================================== */
+
+.kctm-summary-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 25px;
+}
+
+.kctm-summary-card-header {
+    background: #fef9e7;
+    padding: 15px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    border-bottom: 1px solid #e8dcc5;
+    color: #402417;
+}
+
+.kctm-summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.kctm-summary-row:last-child {
+    border-bottom: none;
+}
+
+.kctm-summary-label {
+    font-size: 14px;
+    color: #777;
+    font-weight: 500;
+}
+
+.kctm-summary-value {
+    font-size: 14px;
+    color: #1a1a1a;
+    font-weight: 600;
+    text-align: right;
+}
+
+.kctm-summary-total {
+    background: #fef9e7;
+    border-top: 2px solid #c9a96e;
+}
+
+.kctm-summary-total .kctm-summary-label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.kctm-summary-total .kctm-summary-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: #402417;
+}
+
+/* ==========================================================================
+   Error & Loading States
+   ========================================================================== */
+
+.kctm-error {
+    color: #d63638;
+    font-size: 14px;
+    margin-top: 10px;
+}
+
+#kctm-booking-error {
+    display: none;
+    background: #fef2f2;
+    border: 1px solid #d63638;
+    color: #721c24;
+    padding: 12px 16px;
+    border-radius: 4px;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+#kctm-booking-loading {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+#kctm-booking-loading::after {
+    content: '';
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border: 3px solid #eee;
+    border-top-color: #c9a96e;
+    border-radius: 50%;
+    animation: kctm-spin 0.7s linear infinite;
+}
+
+@keyframes kctm-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Step actions (button row) */
+.kctm-step-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .kctm-consultation-booking {
+        padding: 100px 20px 30px;
+        max-width: 100%;
+    }
+
+    .kctm-consultation-hero h2 {
+        font-size: 24px;
+        padding: 0 5px;
+    }
+
+    .kctm-consultation-hero p {
+        font-size: 14px;
+        padding: 0 5px;
+    }
+
+    .kctm-consultation-price {
+        font-size: 28px;
+    }
+
+    .kctm-consultation-details ul {
+        max-width: 100%;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .kctm-consultation-booking {
+        padding: 90px 12px 15px;
+    }
+
+    .kctm-consultation-hero {
+        padding: 15px 0 10px;
+    }
+
+    .kctm-consultation-hero h2 {
+        font-size: 20px;
+        line-height: 1.3;
+        padding: 0;
+    }
+
+    .kctm-consultation-hero p {
+        font-size: 13px;
+    }
+
+    .kctm-consultation-price {
+        font-size: 24px;
+    }
+
+    .kctm-consultation-price .kctm-price-label {
+        display: block;
+        font-size: 14px;
+        margin-bottom: 2px;
+    }
+
+    .kctm-step-header h3 {
+        font-size: 18px;
+    }
+
+    .kctm-cal-cell {
+        font-size: 12px;
+    }
+
+    .kctm-cal-day-name {
+        font-size: 10px;
+    }
+
+    .kctm-form-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .kctm-time-slot {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    .kctm-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+        width: 100%;
+    }
+
+    .kctm-step-nav {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .kctm-summary-row {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+
+    .kctm-summary-value {
+        text-align: left;
+    }
+
+    .kctm-consultation-details ul li {
+        font-size: 13px;
+    }
+}
